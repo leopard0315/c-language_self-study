@@ -1,0 +1,30 @@
+//이 코드는 저 별을 왼쪽 오른쪽 반으로 잘랐을때 오른쪽만 완성된 코드임
+#include <stdio.h>
+
+int main(void){
+
+  int n;    // 조건 : 1<= n <= 100
+  int i,j;
+  scanf("%d",&n);
+
+  for(i=1; i<=n; i++)  //n번 반복
+    {
+      int k = i*2-1;       //k 선언와 초기화함
+      for(j=1; j<=k; j++)  //k번 반복
+        {
+          printf("*");
+        }
+      printf("\n");
+    }
+
+  for(i=n-1; i>=1; i--)  //n번 반복
+    {
+      int k = i*2-1;       //k 선언와 초기화함
+      for(j=1; j<=k; j++)  //k번 반복
+        {
+          printf("*");
+        }
+      printf("\n");
+    }
+  return 0;
+}
